@@ -1,0 +1,264 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1400px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.greeting {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.subgreeting {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+.headerStats {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.statPill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.statPillDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Stats Row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  transition: var(--transition);
+}
+
+.statCard:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.statCardIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statCardLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statCardValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-top: 2px;
+}
+
+/* Main Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Empty States */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.emptyState span { font-size: 2rem; }
+
+/* Task List */
+.taskList { display: flex; flex-direction: column; gap: 8px; }
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.taskItem:hover { background: var(--bg-hover); }
+
+.taskDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.taskTitle {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.priorityTag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.priority_high { background: var(--accent-red-dim); color: var(--accent-red); }
+.priority_medium { background: var(--accent-amber-dim); color: var(--accent-amber); }
+.priority_low { background: var(--accent-green-dim); color: var(--accent-green); }
+
+/* Habit List */
+.habitList { display: flex; flex-direction: column; gap: 8px; }
+
+.habitItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+}
+
+.habitInfo { display: flex; flex-direction: column; gap: 2px; }
+.habitName { font-size: 0.9rem; font-weight: 500; }
+.habitFreq { font-size: 0.75rem; color: var(--text-muted); }
+
+.streakBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-amber);
+  background: var(--accent-amber-dim);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* Transactions */
+.transactionList { display: flex; flex-direction: column; gap: 8px; }
+
+.transactionRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+}
+
+.transactionIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.transactionInfo { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.transactionDesc { font-size: 0.88rem; font-weight: 500; }
+.transactionDate { font-size: 0.75rem; color: var(--text-muted); }
+
+.amountIncome { font-size: 0.88rem; font-weight: 700; color: var(--accent-green); }
+.amountExpense { font-size: 0.88rem; font-weight: 700; color: var(--accent-red); }
+
+/* Goals */
+.goalList { display: flex; flex-direction: column; gap: 14px; }
+
+.goalItem { display: flex; flex-direction: column; gap: 6px; }
+
+.goalHeader2 { display: flex; justify-content: space-between; align-items: center; }
+.goalTitle2 { font-size: 0.9rem; font-weight: 500; }
+.goalPct { font-size: 0.85rem; font-weight: 700; color: var(--accent-purple); }
+
+.goalBar {
+  height: 6px;
+  background: var(--bg-elevated);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.goalFill {
+  height: 100%;
+  background: var(--gradient-purple);
+  border-radius: 3px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.goalAmounts { display: flex; justify-content: space-between; }
+.goalAmounts span { font-size: 0.78rem; color: var(--text-secondary); }
+.goalTarget { color: var(--text-muted); }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .mainGrid { grid-template-columns: 1fr; }
+}

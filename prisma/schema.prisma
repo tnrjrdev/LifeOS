@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Habit {
+  id        String   @id @default(cuid())
+  name      String
+  frequency String   // e.g., "daily", "weekly"
+  streak    Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model Task {
+  id        String   @id @default(cuid())
+  title     String
+  status    String   @default("pending") // "pending", "completed"
+  priority  String   @default("medium")  // "low", "medium", "high"
+  createdAt DateTime @default(now())
+}
+
+model Transaction {
+  id          String   @id @default(cuid())
+  description String
+  amount      Float
+  type        String   // "income", "expense"
+  category    String
+  date        DateTime @default(now())
+}
+
+model Goal {
+  id           String   @id @default(cuid())
+  title        String
+  targetAmount Float
+  currentAmount Float   @default(0)
+  deadline     DateTime?
+  createdAt    DateTime @default(now())
+}

@@ -1,0 +1,140 @@
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-right: 1px solid var(--border);
+  background: rgba(7, 7, 17, 0.85);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+/* Logo */
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 20px;
+  margin-bottom: 4px;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: var(--shadow-glow-purple);
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.logoBrand { color: var(--text-primary); }
+.logoAccent { color: var(--accent-purple); }
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.navLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  padding: 8px 12px 6px;
+  text-transform: uppercase;
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.navItem:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.navItem.active {
+  background: var(--accent-purple-dim);
+  color: var(--accent-purple);
+  font-weight: 600;
+}
+
+.activeIndicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background: var(--accent-purple);
+  border-radius: 0 2px 2px 0;
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navLabel2 {
+  flex: 1;
+}
+
+/* Footer */
+.sidebarFooter {
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footerCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.footerEmoji { font-size: 1.2rem; }
+
+.footerTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.footerSub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

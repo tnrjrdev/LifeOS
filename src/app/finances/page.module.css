@@ -1,0 +1,172 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1400px;
+}
+
+.header { display: flex; justify-content: space-between; align-items: flex-start; }
+.subtitle { color: var(--text-secondary); margin-top: 4px; font-size: 0.95rem; }
+
+/* Stats */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.statCard {
+  padding: 20px 24px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  transition: var(--transition);
+}
+
+.statCard:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.statBalance { border-top: 2px solid var(--accent-purple); }
+.statIncome  { border-top: 2px solid var(--accent-green); }
+.statExpense { border-top: 2px solid var(--accent-red); }
+
+.statLabel { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+.statAmount { font-size: 1.6rem; font-weight: 700; margin-top: 6px; letter-spacing: -0.02em; }
+.positive { color: var(--accent-green); }
+.negative { color: var(--accent-red); }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .statsRow { grid-template-columns: 1fr; }
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.input {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 11px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.input::placeholder { color: var(--text-muted); }
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gradient-purple);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 4px;
+}
+
+.button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+/* History */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.txRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.txRow:hover { background: var(--bg-hover); }
+
+.txIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.iconIncome { background: var(--accent-green-dim); color: var(--accent-green); }
+.iconExpense { background: var(--accent-red-dim); color: var(--accent-red); }
+
+.txInfo { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.txDesc { font-size: 0.9rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.txMeta { font-size: 0.75rem; color: var(--text-muted); }
+
+.txAmountIncome { font-size: 0.9rem; font-weight: 700; color: var(--accent-green); white-space: nowrap; }
+.txAmountExpense { font-size: 0.9rem; font-weight: 700; color: var(--accent-red); white-space: nowrap; }
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.emptyState span { font-size: 2.5rem; }

@@ -1,0 +1,50 @@
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  padding: 20px 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.body {
+  padding: 16px 24px 24px;
+}
+
+.noPadding .body {
+  padding: 0;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Accent variants — top border glow */
+.accent_purple { border-top: 2px solid var(--accent-purple); }
+.accent_blue   { border-top: 2px solid var(--accent-blue); }
+.accent_green  { border-top: 2px solid var(--accent-green); }
+.accent_red    { border-top: 2px solid var(--accent-red); }
+.accent_amber  { border-top: 2px solid var(--accent-amber); }
